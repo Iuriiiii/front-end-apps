@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,500&display=swap');
 
+@mixin box-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $color: $default) {
+    box-shadow: $x-axis $y-axis $blur $color;
+  }
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -10,16 +15,48 @@ body {
     place-items: center;
     height: 100vh;
     font-family: 'Cabin', sans-serif;
-    background-color: aqua;
+    background-color: rgb(22, 22, 22);
 }
 
 input[type="text"] {
     display: block;
 }
 
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    padding: 30px;
+    background-color: rgb(45, 45, 45);
+
+    h1{
+        color: #ffffff;
+    }
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    border-radius: 10px;
+    width: 500px;
+    height: auto;
+    @include box-shadow(12px, 12px, 12px, rgb(30, 30, 30));
+    background-color:rgb(81, 81, 81);
+}
+
 .code-container {
     width: 400px;
     height: 300px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
 
     textarea {
         width: 100%;
@@ -27,5 +64,29 @@ input[type="text"] {
         max-width: 100%;
         max-height: 100%;
         padding: 10px;
+        resize: none;
+        overflow: hidden;
+        border-radius: 15px;
     }
+}
+.input-container {
+    display: flex;
+    margin-bottom: 25px;
+
+    textarea {
+        resize: none;
+        margin: 0 10px;
+        padding: 15px;
+    }
+}
+.button {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(0, 55, 97);
+    color: #ffffff
+}
+.button:hover {
+    background-color: rgb(0, 39, 69);
+    color: #c7c7c7
 }

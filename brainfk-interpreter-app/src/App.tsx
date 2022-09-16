@@ -80,15 +80,21 @@ function App() {
 
     return (
         <div className="App">
-            <h1>Title</h1>
-            <div className='code-container'>
-                <textarea ref={codeRef}>
-                    {brainfuckTest}
-                </textarea>
-            </div><br />
-            <textarea ref={outputRef}></textarea>
-            <textarea ref={inputRef}></textarea>
-            <button type='button' onClick={onExecute}>Execute</button>
+            <header className='header'>
+                <h1>BrainFk</h1>
+            </header>
+            <div className='card-container'>
+                <div className='code-container'>
+                    <textarea ref={codeRef}>
+                        {brainfuckTest}
+                    </textarea>
+                </div><br />
+                <div className='input-container'>
+                    <textarea ref={outputRef}></textarea>
+                    <textarea ref={inputRef}></textarea>
+                </div>
+                <button className='button' type='button' onClick={onExecute}>Execute</button>
+            </div>
         </div>
     )
 }
