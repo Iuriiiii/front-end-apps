@@ -1,0 +1,105 @@
+*,
+*::after,
+*::before {
+    box-sizing: unset;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(238, 223, 84, 0.904);
+}
+
+.background {
+    z-index: -1;
+    position: absolute;
+    left: calc(-450px / 2.3);
+    top: calc(-450px / 3.7);
+    width: 450px;
+    height: 450px;
+
+    img:first-child {
+        width: 100%;
+        filter: blur(3px);
+    }
+}
+
+.app {
+    z-index: 1;
+    position: relative;
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            text-align: center;
+            color: orange;
+            filter: drop-shadow(0px 3px 5px black);
+        }
+
+        height: 20vh;
+    }
+
+
+    main {
+        display: grid;
+        place-items: center;
+        height: calc(100vh - 20vh);
+
+        .card {
+            /* From https://css.glass */
+            background: rgba(255, 255, 252, 0.16);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(4.6px);
+            -webkit-backdrop-filter: blur(4.6px);
+            width: (300px - 20px);
+            height: 320px - 20px;
+            padding: 10px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            translate: 0px -7vh;
+            // align-items: center;
+
+            h2 {
+                font-size: 18px;
+
+                &::after {
+                    content: ':';
+                }
+            }
+
+            span {
+                display: block;
+                text-align: center;
+
+                &:first-child {
+                    font-weight: bold;
+                }
+
+                &:nth-child(1n+2) {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+.Loading img {
+    animation: loading 1s steps(12) infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
