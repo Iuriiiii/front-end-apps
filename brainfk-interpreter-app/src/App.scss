@@ -38,8 +38,11 @@ input[type="text"] {
 .content {
     position: relative;
     min-height: 100vh;
-    padding-bottom: 280px;
+    padding-bottom: 230px;
     padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-container {
