@@ -102,6 +102,13 @@ function App() {
                 </div>
                 <button className='button' type='button' onClick={onExecute}>Execute</button>
             </div>
+            <footer className='footer'>
+                <h2>Contact</h2>
+                <div className='contact-container'>
+                    <a href='https://www.linkedin.com/in/alexnqn/'>Iuri<i className="fa-brands fa-linkedin"></i></a>
+                    <a href='https://www.linkedin.com/in/mart%C3%ADn-vergara-529527245/'>Reyalic<i className="fa-brands fa-linkedin"></i></a>
+                </div>
+            </footer>
         </div>
     )
 }
