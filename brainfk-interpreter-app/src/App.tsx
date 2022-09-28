@@ -91,16 +91,14 @@ function App() {
                 <h1>BrainFk</h1>
             </header>
             <main className='content'>
-                <div className='card-container'>
-                    <div className='code-container'>
-                        <textarea ref={codeRef}>
-                         {brainfuckTest}
-                        </textarea>
-                    </div><br />
-                    <div className='input-container'>
-                        <textarea ref={outputRef}></textarea>
-                        <textarea ref={inputRef}></textarea>
-                    </div>
+                <div className='code-container'>
+                    <textarea ref={codeRef}>
+                        {brainfuckTest}
+                    </textarea>
+                </div><br />
+                <div className='input-container'>
+                    <textarea placeholder='input' ref={outputRef}></textarea>
+                    <textarea placeholder='output' ref={inputRef}></textarea>
                     <button className='button' type='button' onClick={onExecute}>Execute</button>
                 </div>
             </main>
