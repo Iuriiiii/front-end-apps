@@ -86,11 +86,11 @@ function App() {
     }
 
     return (
-        <div className="App">
-            <header className='header'>
-                <h1>BrainFk</h1>
+        <div className="container mx-auto h-screen bg-red-600">
+            <header className='bg-red-500 text-center py-4'>
+                <h1 className='text-3xl font-mono hover:italic'>BrainFk</h1>
             </header>
-            <main className='content'>
+            <main className='container mx-auto my-auto h-full flex justify-center align-bottom'>
                 <div className='card-container'>
                     <div className='code-container'>
                         <textarea ref={codeRef}>
