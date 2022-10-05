@@ -88,7 +88,7 @@ function App() {
     return (
         <div className='relative container mx-auto h-screen bg-red-500 font-mono text-white flex flex-col'>
             <header className='bg-red-800 text-center py-4'>
-                <h1 className='text-3xl '>BrainFk</h1>
+                <h1 className='text-3xl '>BrainFk Interpreter</h1>
             </header>
             <main className='grid grid-cols-2 grid-rows-3 h-full w-full text-slate-700'>
 
@@ -104,8 +104,8 @@ function App() {
             <footer className='bg-red-800 w-full text-center py-5'>
                 <h2>Contact</h2>
                 <div className='space-x-10'>
-                    <a href='https://alexdeveloper.me/'>Iuri<i className="fa-brands fa-linkedin"></i></a>
-                    <a href='https://www.linkedin.com/in/mart%C3%ADn-vergara-529527245/'>Reyalic<i className="fa-brands fa-linkedin"></i></a>
+                    <a href='https://alexdeveloper.me/'>Iuri<i className="fa fa-globe" aria-hidden='true'></i></a>
+                    <a href='https://www.linkedin.com/in/mart%C3%ADn-vergara-529527245/' target='_blank'>Reyalic<i className="fa-brands fa-linkedin"></i></a>
                 </div>
             </footer>
         </div>
