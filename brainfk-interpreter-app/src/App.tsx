@@ -90,17 +90,15 @@ function App() {
             <header className='bg-red-500 text-center py-4'>
                 <h1 className='text-3xl font-mono hover:italic'>BrainFk</h1>
             </header>
-            <main className='container mx-auto my-auto h-full flex justify-center align-bottom'>
-                <div className='card-container'>
-                    <div className='code-container'>
-                        <textarea ref={codeRef}>
-                         {brainfuckTest}
-                        </textarea>
-                    </div><br />
-                    <div className='input-container'>
-                        <textarea ref={outputRef}></textarea>
-                        <textarea ref={inputRef}></textarea>
-                    </div>
+            <main className='content'>
+                <div className='code-container'>
+                    <textarea ref={codeRef}>
+                        {brainfuckTest}
+                    </textarea>
+                </div><br />
+                <div className='input-container'>
+                    <textarea placeholder='input' ref={outputRef}></textarea>
+                    <textarea placeholder='output' ref={inputRef}></textarea>
                     <button className='button' type='button' onClick={onExecute}>Execute</button>
                 </div>
             </main>
