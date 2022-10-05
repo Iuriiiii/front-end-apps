@@ -86,26 +86,25 @@ function App() {
     }
 
     return (
-        <div className="container mx-auto h-screen bg-red-600">
-            <header className='bg-red-500 text-center py-4'>
-                <h1 className='text-3xl font-mono hover:italic'>BrainFk</h1>
+        <div className='relative container mx-auto h-screen bg-red-500 font-mono text-white flex flex-col'>
+            <header className='bg-red-800 text-center py-4'>
+                <h1 className='text-3xl '>BrainFk</h1>
             </header>
-            <main className='content'>
-                <div className='code-container'>
-                    <textarea ref={codeRef}>
-                        {brainfuckTest}
-                    </textarea>
-                </div><br />
-                <div className='input-container'>
-                    <textarea placeholder='input' ref={outputRef}></textarea>
-                    <textarea placeholder='output' ref={inputRef}></textarea>
-                    <button className='button' type='button' onClick={onExecute}>Execute</button>
-                </div>
+            <main className='grid grid-cols-2 grid-rows-3 h-full w-full text-slate-700'>
+
+                <textarea placeholder='Brainf*ck code' className='col-start-1 col-end-2 row-start-1 row-end-4' ref={codeRef}>
+                    {brainfuckTest}
+                </textarea>
+
+                <textarea placeholder='Input' ref={inputRef}></textarea>
+                <textarea placeholder='Output' ref={outputRef}></textarea>
+                <button className='text-white font-bold' type='button' onClick={onExecute}>Execute</button>
+
             </main>
-            <footer className='footer'>
+            <footer className='bg-red-800 w-full text-center py-5'>
                 <h2>Contact</h2>
-                <div className='contact-container'>
-                    <a href='https://www.linkedin.com/in/alexnqn/'>Iuri<i className="fa-brands fa-linkedin"></i></a>
+                <div className='space-x-10'>
+                    <a href='https://alexdeveloper.me/'>Iuri<i className="fa-brands fa-linkedin"></i></a>
                     <a href='https://www.linkedin.com/in/mart%C3%ADn-vergara-529527245/'>Reyalic<i className="fa-brands fa-linkedin"></i></a>
                 </div>
             </footer>
